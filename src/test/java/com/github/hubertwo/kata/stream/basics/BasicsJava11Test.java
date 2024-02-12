@@ -39,13 +39,6 @@ class BasicsJava11Test {
 
     private static final Set<Fruit> FRUITS = Set.of(PAPAYA, BANANA, KIWI, MANGO, PEACH);
 
-    // <editor-fold defaultstate="collapsed" desc="Click here to see the answer">
-    /*
-      FRUITS.stream()
-                .filter(Predicate.not(f -> f.equals(BANANA)))
-                .collect(toUnmodifiableList());
-     */
-    //</editor-fold>
     @Test
     @DisplayName("Task: Get all fruits except BANANA")
     void task1() {
@@ -58,15 +51,6 @@ class BasicsJava11Test {
                 .containsExactlyInAnyOrder(PAPAYA, KIWI, MANGO, PEACH);
     }
 
-    // <editor-fold defaultstate="collapsed" desc="Click here to see the answer">
-    /*
-      givenFruitList
-                .lines()
-                .map(line -> line.split(","))
-                .map(splittedLine -> new Fruit(splittedLine[0], Integer.parseInt(splittedLine[1])))
-                .collect(toList());
-     */
-    //</editor-fold>
     @Test
     @DisplayName("Task: Load fruit list from file")
     void task2() throws IOException, URISyntaxException {
